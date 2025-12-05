@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Night Run VR</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Menú inicial -->
+  <div id="menu">
+    <div class="menu-card">
+      <h1>Night Run VR</h1>
+      <p class="subtitle">Escapa del camino lleno de obstáculos y junta coins.</p>
+
+      <div class="section">
+        <h2>Instrucciones</h2>
+        <ul>
+          <li>Haz clic en <b>Iniciar Juego</b>.</li>
+          <li>Usa <b>A / D</b> o <b>flechas izquierda / derecha</b> para moverte.</li>
+          <li>Evita los pinchos y recoge las coins.</li>
+          <li>Puedes pausar el juego con el botón <b>Pausa</b>.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Integrante</h2>
+        <p>Pérez Enríquez Hugo Abdel – 22201124</p>
+      </div>
+
+      <button id="startBtn" onclick="startGame()">Iniciar Juego</button>
+    </div>
+  </div>
+
+  <!-- HUD superior -->
+  <div id="hud">
+    <div>Puntuación: <span id="score">0</span></div>
+    <div>Tiempo: <span id="time">0</span>s</div>
+    <div id="status"></div>
+    <div id="hudButtons">
+      <button id="pauseBtn" onclick="pauseGame()">Pausa</button>
+      <button id="restartBtn" onclick="restartGame()">Reiniciar</button>
+    </div>
+  </div>
+
+  <!-- Panel tipo Geometry Dash (pausa / game over) -->
+  <div id="gamePanel">
+    <div class="panel-card">
+      <h1>Tecnológico de Pachuca</h1>
+      <p id="panelSubtitle">Pausa</p>
+
+      <div class="panel-buttons">
+        <button id="panelPlayBtn">Play</button>
+        <button id="panelRestartBtn">Reiniciar</button>
+      </div>
+
+      <div class="panel-music">
+        <span>MUSIC</span>
+        <input type="range" id="musicSlider" min="0" max="1" step="0.01" value="0.5">
+        <input id="sfxSlider" type="range" min="0" max="1" step="0.01" value="0.7">
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
